@@ -1,0 +1,11 @@
+if ($('.info').length == 0) {
+   $("#breed_images").hide(function() {
+     $(this).append("<%= j render 'images' %>")
+   })
+   $("#breed_images").fadeIn("slow");
+
+} else {
+  $(".info").fadeOut("slow", function() {
+       $(this).remove();
+   });
+}

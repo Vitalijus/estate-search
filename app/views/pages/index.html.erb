@@ -1,0 +1,6 @@
+<%= form_with url: pages_show_path, local: false, method: :get do |f| %>
+  Breed: <%= f.text_field :breed %><br />
+  <%= f.submit "Submit", data: { disable_with: "Loading..." } %>
+<% end %>
+
+<div id="breed_images"></div>
