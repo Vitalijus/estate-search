@@ -1,11 +1,11 @@
-# response = DogBreedService::GetBreed.new("Beagle")
+# response = DogApi::GetBreed.new("Beagle")
 # response.build_result
 
-class DogBreedService::GetBreed < DogBreedService::Base
+class DogApi::GetBreed < DogApi::Base
   attr_reader :error, :result
 
   def initialize(breed)
-    @breed = breed
+    @breed = breed.downcase
   end
 
   def call
@@ -18,7 +18,8 @@ class DogBreedService::GetBreed < DogBreedService::Base
 
   def build_result
     response = call
-    @error = "Unsuccessful response, couldn't get #{@breed} images" if response["status"] != "success"
+    @error = "Unsuccessful response, couldn't get #{@breed} images" if response["status"] != "success" ||
+                                                                       response["code"] == 404
 
     @result = breed_details(response["message"])
   end

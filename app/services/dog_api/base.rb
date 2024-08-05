@@ -1,7 +1,7 @@
-# address = DogBreedService::Base.new
+# address = DogApi::Base.new
 # address.breed_endpoint
 
-class DogBreedService::Base
+class DogApi::Base
   def base_address
     ENV.fetch("DOG_API_BASE_ADDRESS")
   end
