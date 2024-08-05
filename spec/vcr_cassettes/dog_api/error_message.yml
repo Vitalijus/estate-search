@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dog.ceo/api/breed/maine%20coon/images
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - dog.ceo
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Mon, 05 Aug 2024 16:03:02 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '87'
+      Connection:
+      - close
+      X-Powered-By:
+      - PHP/8.1.25
+      Access-Control-Allow-Origin:
+      - "*"
+      Via:
+      - 1.1 varnish (Varnish/6.3), 1.1 varnish (Varnish/6.3)
+      Cache-Control:
+      - max-age=1800
+      X-Cache-Age:
+      - '2572'
+      X-Cache-Hits:
+      - '15'
+      X-Cache:
+      - HIT
+      Age:
+      - '0'
+      Vary:
+      - ''
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=m6u4yFQAKlbBuUnA%2B%2FAn5rOKlFjf5HrN04SSSqDvbdWm0nPD5gJSuxKkgbyAQbGMIYJCV68iYoMYcAOXv6iWDfENuNKK3n0M0l1jpMciOX%2F4G8AOZ1GQTQ9%2B"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8ae803d368f3b50f-OSL
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"status":"error","message":"Breed not found (master breed does not
+        exist)","code":404}'
+  recorded_at: Mon, 05 Aug 2024 16:03:02 GMT
+recorded_with: VCR 6.2.0
