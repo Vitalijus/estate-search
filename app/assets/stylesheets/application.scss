@@ -10,6 +10,31 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
  */
+
+@import "bootstrap";
+
+#form_wrapper {
+  max-width: 500px;
+  padding: 20px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #cdcdcd;
+}
+
+.breed_images {
+  max-width: 500px;
+  margin: auto;
+}
+
+.card {
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.error_message {
+  max-width: 500px;
+  margin: 0 auto;
+  color: red;
+}

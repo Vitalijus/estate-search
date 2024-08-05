@@ -5,7 +5,6 @@ class PagesController < ApplicationController
   end
 
   def show
-    # binding.pry
     @breed = params[:breed]
     response = DogApi::GetBreed.new(params[:breed])
     response.build_result
