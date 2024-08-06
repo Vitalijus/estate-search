@@ -1,7 +1,7 @@
 <div id="form_wrapper">
   <%= form_with url: pages_show_path, local: false, method: :get do |f| %>
     <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Breed name:</label>
+      <label for="exampleFormControlInput1" class="form-label">Breed name (e.g. Beagle or Chow):</label>
       <%= f.text_field :breed, class: "form-control", id: "exampleFormControlInput1" %>
     </div>
 
