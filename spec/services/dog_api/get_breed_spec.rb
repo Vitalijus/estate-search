@@ -1,5 +1,5 @@
 require "rails_helper"
-require "pry"
+# require "pry"
 
 describe DogApi::GetBreed, type: :request do
   describe "call to the Dog API" do

@@ -1,5 +1,5 @@
 require 'rails_helper'
-require "pry"
+# require "pry"
 
 RSpec.describe "Pages", type: :request do
   describe "GET /index" do
