@@ -1,4 +1,5 @@
 require 'rails_helper'
+require "pry"
 
 RSpec.describe "Pages", type: :request do
   describe "GET /index" do
@@ -8,4 +9,13 @@ RSpec.describe "Pages", type: :request do
     end
   end
 
+  describe "GET /show" do
+    it "should respond to js" do
+      VCR.use_cassette("dog_api/show_action") do
+        @params = { breed: 'Beagle' }
+        get "/pages/show", params: @params, xhr: true
+        expect(response.content_type).to eq("text/javascript; charset=utf-8")
+      end
+    end
+  end
 end
